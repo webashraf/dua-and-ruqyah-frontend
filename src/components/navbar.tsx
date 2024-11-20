@@ -14,10 +14,10 @@ export const Navbar = () => {
   const searchInput = (
     <Input
       aria-label="Search"
-      className="relative"
+      className="relative bg-white"
       classNames={{
-        inputWrapper: "bg-white border pr-1 py-[2px]",
-        input: "text-sm",
+        inputWrapper: "bg-white border pr-1 h-[50px] w-[400px] py-[2px]",
+        input: "text-sm ",
       }}
       endContent={
         <div className="bg-[#f3f4f6] px-2 h-full flex items-center justify-center rounded-lg">
@@ -50,7 +50,7 @@ export const Navbar = () => {
         justify="end"
       >
         <div className="flex items-center justify-between w-[90%]">
-          <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+          <NavbarItem className="hidden lg:flex hobv">{searchInput}</NavbarItem>
           <NavbarItem className="hidden md:flex">
             <NavAvatar />
           </NavbarItem>

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background: #f5f7fa; /* Light gray background for the track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c4c4c4; /* Gray color for the thumb */
+  border: 2px solid #f5f7fa; /* Space between the thumb and track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9; /* Darker gray when hovering over the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f5f7fa; /* Light gray background for the track */
+}
