@@ -11,7 +11,11 @@ const page = async () => {
   return (
     <div>
       {sub_categories?.map((sub_category: IDuaSubCategory) => (
-        <Duah key={sub_category.id} sub_cat={sub_category} />
+        <Duah
+          key={sub_category.id}
+          // section={sub_category.subcat_name_en}
+          sub_cat={sub_category}
+        />
       ))}
     </div>
   );
