@@ -6,9 +6,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 
-import { ICategory } from "../types/duah";
-
 import SubCategories from "./subCategories";
+
+import { ICategory } from "@/src/types/duah";
 
 const CategoryMenu = () => {
   const [categories, setCategories] = useState<ICategory[]>([]);
@@ -20,7 +20,7 @@ const CategoryMenu = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/categories`);
+        const res = await fetch(`https://dua-rukiyah-backend.vercel.app/categories`);
 
         if (!res.ok) throw new Error("Failed to fetch categories.");
         const data = await res.json();

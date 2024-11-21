@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import SettingsSidebar from "./duas/_components/SettingsSidebar";
 
-import CategoryMenu from "@/src/components/categoryMenu";
+import CategoryMenu from "@/src/components/categoryComponets/categoryMenu";
 import { Navbar } from "@/src/components/navbar";
 import SideIconNav from "@/src/components/sideIconNav";
 
