@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { IDuah, IDuaSubCategory } from "@/src/types/duah";
+import { IDuah, ISubCategory } from "@/src/types/duah";
 
-const Duah = async ({ sub_cat }: { sub_cat: IDuaSubCategory }) => {
+const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
   const res = await fetch(`http://localhost:5000/dua/${sub_cat.subcat_id}`);
   const data: IDuah[] = await res.json();
 

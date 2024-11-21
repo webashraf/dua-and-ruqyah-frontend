@@ -50,7 +50,7 @@ const SettingsSidebar = () => {
                 base: cn(
                   "inline-flex flex-row-reverse w-full  items-center",
                   "justify-between cursor-pointer rounded-lg gap-2 px-4 border-2 border-transparent",
-                  ""
+                  "",
                 ),
                 wrapper: "p-0 h-4 overflow-visible",
                 thumb: cn(
@@ -60,7 +60,7 @@ const SettingsSidebar = () => {
                   "group-data-[selected=true]:ml-6",
                   // pressed
                   "group-data-[pressed=true]:w-7",
-                  "group-data-[selected]:group-data-[pressed]:ml-4"
+                  "group-data-[selected]:group-data-[pressed]:ml-4",
                 ),
               }}
             />

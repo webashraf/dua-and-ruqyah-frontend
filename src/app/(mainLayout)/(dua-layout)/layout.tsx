@@ -8,7 +8,7 @@ import SideIconNav from "@/src/components/sideIconNav";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className="h-[100vh] overflow-hidden">
       <Navbar />
 
       <div className="flex items-start justify-between gap-[30]">
