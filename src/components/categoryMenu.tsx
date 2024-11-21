@@ -8,6 +8,8 @@ import { IoIosSearch } from "react-icons/io";
 
 import { ICategory } from "../types/duah";
 
+import SubCategories from "./subCategories";
+
 const CategoryMenu = () => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -36,12 +38,8 @@ const CategoryMenu = () => {
 
   // Filter categories based on the search term
   const filteredCategories = categories.filter((category) =>
-    category.cat_name_en.toLowerCase().includes(searchTerm.toLowerCase())
+    category?.cat_name_en.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  // const itemClasses = {
-  //   trigger: "px-0 py- rounded-lg flex items-center",
-  // };
 
   return (
     <div className="space-y-2">
@@ -77,24 +75,26 @@ const CategoryMenu = () => {
           {!loading && !error && filteredCategories.length > 0
             ? filteredCategories.map((category: ICategory) => (
                 <div
-                  key={category.id}
-                  className="flex items-center justify-between  rounded-md"
+                  key={category?.id}
+                  className="flex items-center justify-between rounded-md"
                 >
                   <Accordion
-                    // itemClasses={itemClasses}
-                    selectionMode="multiple"
+                    disableAnimation={true}
+                    itemClasses={{
+                      base: "py-2 w-full",
+                      trigger: ` px-2 py-2 data-[hover=true]:bg-[#e8f0f5] rounded-lg  flex items-center ${
+                        activeAccordion === category?.id ? "bg-[#e8f0f5]" : ""
+                      }`,
+                      content: "text-small px-2 py-2",
+                    }}
                   >
                     <AccordionItem
-                      key={category.id}
+                      key={category?.id}
                       hideIndicator
-                      aria-label={category.cat_name_en}
+                      aria-label={category?.cat_name_en}
                       startContent={
                         <div
-                          className={`flex items-center justify-between gap-4 min-h-10 p-2 rounded-lg w-[290px]  ${
-                            activeAccordion === category.id
-                              ? "bg-[#e8f0f5]"
-                              : ""
-                          }`}
+                          className={`flex items-center justify-between gap-4 text-default-800 min-h-10 rounded-lg w-[290px] `}
                         >
                           <div className="w-full flex gap-2 items-center">
                             <span className="bg-[#cfe0e5] p-2 rounded-lg">
@@ -107,26 +107,28 @@ const CategoryMenu = () => {
                             </span>
                             <div className="flex flex-col items-start">
                               <h3 className="text-sm font-sans font-semibold text-green-600">
-                                {category.cat_name_en}
+                                {category?.cat_name_en}
                               </h3>
                               <p className="text-[14px] text-gray-500">
-                                Subcategory: {category.no_of_subcat}
+                                Subcategory: {category?.no_of_subcat}
                               </p>
                             </div>
                           </div>
-                          <div className="text-gray-800 font-semibold">
-                            <h4>{category.no_of_dua}</h4>
-                            <h4>Duas</h4>
+                          <div className=" ">
+                            <h4 className="text-[16px] text-gray-800 font-semibold">
+                              {category?.no_of_dua}
+                            </h4>
+                            <h4 className="text-[#7E7E7E]">Duas</h4>
                           </div>
                         </div>
                       }
                       onClick={() =>
                         setActiveAccordion(
-                          activeAccordion === category.id ? null : category.id
+                          activeAccordion === category?.id ? null : category?.id
                         )
                       }
                     >
-                      <p>Number of Duas: {category.no_of_dua}</p>
+                      <SubCategories id={category?.id} />
                     </AccordionItem>
                   </Accordion>
                 </div>
