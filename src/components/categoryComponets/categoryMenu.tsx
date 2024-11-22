@@ -145,7 +145,6 @@ const CategoryMenu = () => {
                       }
                     >
                       <div className="px-2">
-                        {" "}
                         <SubCategories id={category?.id} />
                       </div>
                     </AccordionItem>

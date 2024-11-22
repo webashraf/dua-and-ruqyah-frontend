@@ -1,10 +1,9 @@
-.sub-category-target::before {
+/* .sub-category-target::before {
   content: "";
-  /* display: block; */
   background-color: rgb(5, 167, 5);
   border-radius: 100%;
   position: absolute;
   left: -2 !important;
   width: 5px;
   height: 5px;
-}
+} */

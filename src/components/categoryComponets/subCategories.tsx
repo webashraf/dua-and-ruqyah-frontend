@@ -60,9 +60,10 @@ const SubCategories = ({ id }: { id: number }) => {
             aria-label={`Accordion ${subCategory?.id}`}
             className="text-black "
             title={
-              <span className="text-green-600 font-medium text-[14px]">
+              <div className="text-green-600 font-medium text-[14px] relative">
+                <div className="h-[6] w-[6] rounded-full bg-green-600 absolute -left-[19px] top-2" />{" "}
                 {subCategory?.subcat_name_en}
-              </span>
+              </div>
             }
           >
             <DuahMenu id={subCategory?.subcat_id} />
