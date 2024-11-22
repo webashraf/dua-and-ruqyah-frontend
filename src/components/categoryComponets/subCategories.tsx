@@ -61,7 +61,7 @@ const SubCategories = ({ id }: { id: number }) => {
             className="text-black "
             title={
               <div className="text-green-600 font-medium text-[14px] relative">
-                <div className="min-h-[6] min-w-[6] rounded-full bg-green-600 absolute -left-[19px] top-2" />{" "}
+                <div className="min-h-[6px] min-w-[6px] rounded-full bg-green-600 absolute -left-[19px] top-2" />{" "}
                 {subCategory?.subcat_name_en}
               </div>
             }
