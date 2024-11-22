@@ -11,7 +11,9 @@ const generateSafeId = (text: string, id: number): string => {
 };
 
 const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
-  const res = await fetch(`https://dua-rukiyah-backend.vercel.app/dua/${sub_cat.subcat_id}`);
+  const res = await fetch(
+    `https://dua-rukiyah-backend.vercel.app/dua/${sub_cat.subcat_id}`
+  );
 
   if (!res.ok) {
     throw new Error(`Failed to fetch Duas: ${res.statusText}`);
@@ -21,7 +23,7 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
 
   return (
     <div className="px-5">
-      <div>
+      <>
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
           <h4 className="font-semibold">
             <span className="text-green-600">Section: </span>
@@ -37,7 +39,8 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
             <div
               key={dua.id}
               className="bg-white p-6 rounded-lg shadow-md mb-6 space-y-[10px]"
-              id={generateSafeId(dua.dua_name_en || "", dua.id)}
+              id={`${dua.id}`}
+              // id={generateSafeId(dua.dua_name_en || "", dua.id)}
             >
               {dua.dua_name_en && (
                 <div className="text-gray-800 font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">
@@ -82,7 +85,7 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
             </div>
           ))
         )}
-      </div>
+      </>
     </div>
   );
 };

@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import "@/src/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 import Head from "next/head";
 
-import { Providers } from "./providers";
+import { Providers } from "../lib/providers";
 
 import { fontSans } from "@/src/config/fonts";
 import { siteConfig } from "@/src/config/site";
@@ -42,12 +43,12 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-[#f7f8fa] font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-full px-6 flex-grow">
+          <div className="relative flex flex-col lg:h-screen">
+            <main className="container mx-auto max-w-full px-6 flex-grow ">
               {children}
             </main>
           </div>

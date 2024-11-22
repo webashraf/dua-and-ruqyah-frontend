@@ -20,7 +20,9 @@ const CategoryMenu = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch(`https://dua-rukiyah-backend.vercel.app/categories`);
+        const res = await fetch(
+          `https://dua-rukiyah-backend.vercel.app/categories`
+        );
 
         if (!res.ok) throw new Error("Failed to fetch categories.");
         const data = await res.json();
@@ -42,12 +44,12 @@ const CategoryMenu = () => {
   );
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 min-w-[350px] rounded-xl lg:overflow-hidden">
       <div className="bg-primary flex items-center justify-center text-[17px] font-sans h-[57px]">
         <h4>Category</h4>
       </div>
 
-      <div className="bg-white">
+      <div className="bg-white px-2">
         <Input
           aria-label="Search"
           className="relative bg-white"

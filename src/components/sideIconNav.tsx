@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SideIconNav = () => {
   return (
-    <div className="h-[90vh] w-full rounded-xl bg-white flex flex-col justify-between items-center py-5">
+    <div className="h-[92vh] mt-10 rounded-3xl bg-white lg:flex flex-col justify-between items-center py-5 min-w-[100px]   hidden">
       <div>
         <Image
           alt="dua-logo"

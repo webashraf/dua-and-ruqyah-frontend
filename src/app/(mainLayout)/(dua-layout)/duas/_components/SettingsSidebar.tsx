@@ -8,7 +8,6 @@ import { RxDashboard } from "react-icons/rx";
 
 const SettingsSidebar = () => {
   const [activeTab, setActiveTab] = useState("appearance");
-  const [nightMode, setNightMode] = useState(false);
 
   const tabs = [
     { id: "language", name: "Language Settings", icon: <HiOutlineLanguage /> },
@@ -18,7 +17,7 @@ const SettingsSidebar = () => {
   ];
 
   return (
-    <div className="w-full max-w-sm mx-auto p-4 h-full rounded-lg shadow">
+    <div className="max-w-sm mx-auto p-4 shadow min-w-[300px] bg-white h-[85vh] rounded-3xl overflow-hidden hidden lg:block">
       <h2 className="text-lg font-semibold text-gray-800 mb-4 text-center">
         Settings
       </h2>
@@ -34,7 +33,6 @@ const SettingsSidebar = () => {
             onClick={() => setActiveTab(tab.id)}
           >
             <p className="flex items-center gap-2">
-              {" "}
               {tab.icon} {tab.name}
             </p>
           </button>
@@ -50,7 +48,7 @@ const SettingsSidebar = () => {
                 base: cn(
                   "inline-flex flex-row-reverse w-full  items-center",
                   "justify-between cursor-pointer rounded-lg gap-2 px-4 border-2 border-transparent",
-                  "",
+                  ""
                 ),
                 wrapper: "p-0 h-4 overflow-visible",
                 thumb: cn(
@@ -60,7 +58,7 @@ const SettingsSidebar = () => {
                   "group-data-[selected=true]:ml-6",
                   // pressed
                   "group-data-[pressed=true]:w-7",
-                  "group-data-[selected]:group-data-[pressed]:ml-4",
+                  "group-data-[selected]:group-data-[pressed]:ml-4"
                 ),
               }}
             />

@@ -13,7 +13,9 @@ const DuahMenu = ({ id }: { id: number }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`https://dua-rukiyah-backend.vercel.app/dua/${id}`);
+        const res = await fetch(
+          `https://dua-rukiyah-backend.vercel.app/dua/${id}`
+        );
 
         if (!res.ok) {
           throw new Error("Failed to fetch data");
@@ -54,8 +56,9 @@ const DuahMenu = ({ id }: { id: number }) => {
             {dua.dua_name_en && (
               <a
                 className="text-[12px] text-green-600 py-2"
-                href={`#${safeId}`}
-                style={{ scrollBehavior: "smooth" }}
+                // duration={1000}
+                // smooth={true}
+                href={`#${dua?.id}`}
               >
                 {dua.dua_name_en}
               </a>

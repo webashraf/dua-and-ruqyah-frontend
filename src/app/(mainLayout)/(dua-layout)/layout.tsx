@@ -2,29 +2,25 @@ import { ReactNode } from "react";
 
 import SettingsSidebar from "./duas/_components/SettingsSidebar";
 
-import CategoryMenu from "@/src/components/categoryComponets/categoryMenu";
+import MobileNav from "@/src/components/mobileNav";
 import { Navbar } from "@/src/components/navbar";
 import SideIconNav from "@/src/components/sideIconNav";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="h-[100vh] overflow-hidden">
-      <Navbar />
+    <div className="lg:h-[100vh] ">
+      <div className="flex items-start gap-7">
+        <SideIconNav />
 
-      <div className="flex items-start justify-between gap-[30]">
-        <div className="w-[80px]">
-          <SideIconNav />
-        </div>
-        <div className="w-[500px]  rounded-xl overflow-hidden">
-          <CategoryMenu />
-        </div>
-        <div className="min-w-[50%] max-w-[60%]  h-[90vh] overflow-y-scroll custom-scrollbar">
-          {children}
-        </div>
-        <div className="w-[400px] bg-white h-[90vh] rounded-3xl overflow-hidden">
-          <SettingsSidebar />
+        <div>
+          <Navbar />
+          <div className=" w-full flex ">
+            {children}
+            <SettingsSidebar />
+          </div>
         </div>
       </div>
+   
     </div>
   );
 };
