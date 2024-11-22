@@ -37,12 +37,12 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
         ) : (
           data.map((dua: IDuah) => (
             <div
-              key={dua.id}
+              key={dua?.id}
               className="bg-white p-6 rounded-lg shadow-md mb-6 space-y-[10px]"
-              id={`${dua.id}`}
-              // id={generateSafeId(dua.dua_name_en || "", dua.id)}
+              id={`${dua?.id}`}
+              // id={generateSafeId(dua?.dua_name_en || "", dua?.id)}
             >
-              {dua.dua_name_en && (
+              {dua?.dua_name_en && (
                 <div className="text-gray-800 font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">
                   <Image
                     alt="Allah"
@@ -51,37 +51,37 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
                     width={35}
                   />
                   <h4 className="text-[16px]">
-                    {dua.id}. {dua.dua_name_en}
+                    {dua?.id}. {dua?.dua_name_en}
                   </h4>
                 </div>
               )}
-              {dua.top_en && (
-                <p className="text-gray-700 mb-4 font-sans">{dua.top_en}</p>
+              {dua?.top_en && (
+                <p className="text-gray-700 mb-4 font-sans">{dua?.top_en}</p>
               )}
-              {dua.clean_arabic && (
+              {dua?.clean_arabic && (
                 <p className="text-gray-800 p-4 rounded-lg text-sm mb-4 text-right font-sans">
-                  {dua.clean_arabic}
+                  {dua?.clean_arabic}
                 </p>
               )}
-              {dua.transliteration_en && (
+              {dua?.transliteration_en && (
                 <p className="text-gray-600 font-medium font-sans">
-                  <strong>Transliteration:</strong> {dua.transliteration_en}
+                  <strong>Transliteration:</strong> {dua?.transliteration_en}
                 </p>
               )}
-              {dua.translation_en && (
+              {dua?.translation_en && (
                 <p className="text-gray-600 font-medium font-sans">
-                  <strong>Translation:</strong> {dua.translation_en}
+                  <strong>Translation:</strong> {dua?.translation_en}
                 </p>
               )}
-              {dua.bottom_en && (
+              {dua?.bottom_en && (
                 <p className="text-gray-600 font-medium">
-                  <strong>The Prophet (ﷺ) said:</strong> {dua.bottom_en}
+                  <strong>The Prophet (ﷺ) said:</strong> {dua?.bottom_en}
                 </p>
               )}
-              {dua.refference_en && (
+              {dua?.refference_en && (
                 <p className="text-gray-600 font-medium font-sans">
                   <strong className="text-green-600">Reference:</strong>{" "}
-                  {dua.refference_en}
+                  {dua?.refference_en}
                 </p>
               )}
             </div>

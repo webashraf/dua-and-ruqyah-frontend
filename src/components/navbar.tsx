@@ -14,7 +14,7 @@ export const Navbar = () => {
   const searchInput = (
     <Input
       aria-label="Search"
-      className="relative"
+      className="relative "
       classNames={{
         inputWrapper: [
           "bg-white border pr-1 h-[50px] w-[400px] py-[2px] ",
