@@ -1,53 +1,56 @@
-# Next.js & NextUI Template
+# Dua and Ruqyah Web Application
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+This project is a responsive web application designed for showcasing Categories, Subcategories, and Duas. It was built using **Next.js**, **Tailwind CSS**, and custom **Node.js APIs**. The project implements **Static Site Generation (SSG)** for optimal performance and a fully responsive UI that aligns with the provided Figma and live design links.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+---
 
-## Technologies Used
+## Features
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+### Functional
+- **Dynamic Data Fetching**: Categories, Subcategories, and Dua Cards dynamically retrieved from custom Node.js APIs.
+- **Static Site Generation (SSG)**: Pre-rendered pages for improved performance and SEO.
+- **Responsive Design**: Fully responsive layout compatible with various devices.
+- **Accurate Design Implementation**: UI adheres closely to provided Figma and live links.
 
-## How to Use
+### Non-Functional
+- Red-marked sections were designed as placeholders based on provided instructions.
 
-### Use the template with create-next-app
+---
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## Live Demo
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+Explore the deployed application:
+[Live Link](https://dua-and-ruqyah-frontend.vercel.app/duas)
 
-### Install dependencies
+---
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+## Submission Details
 
-```bash
-npm install
-```
+- **Video Walkthrough**: [Watch the Video](https://youtu.be/Qddm6So8e80)
+- **Frontend Repository**: [View Code](https://github.com/webashraf/dua-and-ruqyah-frontend)
+- **Backend Repository**: [View Code](https://github.com/webashraf/dua-and-ruqyah-backend)
 
-### Run the development server
+---
 
-```bash
-npm run dev
-```
+## Tech Stack
 
-### Setup pnpm (optional)
+### Frontend
+- **Next.js**: Framework for building server-rendered React applications.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Axios**: HTTP client for API requests.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### Backend
+- **Node.js**: JavaScript runtime for building server-side applications.
+- **Express.js**: Lightweight web framework for API development.
+- **MongoDB**: NoSQL database for storing Categories, Subcategories, and Dua data.
 
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
+---
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## Installation and Setup
 
-## License
+To run the project locally, follow these steps:
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+### Backend Setup
+1. Clone the backend repository:
+   ```bash
+   git clone https://github.com/webashraf/dua-and-ruqyah-backend.git
