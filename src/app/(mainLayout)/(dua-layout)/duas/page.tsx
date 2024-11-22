@@ -1,7 +1,7 @@
 import Duah from "./_components/Duah";
 
 import CategoryMenu from "@/src/components/categoryComponets/categoryMenu";
-import MobileNav from "@/src/components/mobileNav";
+import MobileNav from "@/src/components/CategoryNavMobile";
 import { ISubCategory } from "@/src/types/duah";
 
 const page = async () => {
@@ -11,7 +11,7 @@ const page = async () => {
   const sub_categories = await res.json();
 
   return (
-    <div className="lg:flex lg:h-[85vh] h-auto">
+    <div className="lg:flex gap-7 lg:h-[85vh] overflow-hidden h-auto">
       <div className="">
         <MobileNav />
         <div className="lg:block hidden">

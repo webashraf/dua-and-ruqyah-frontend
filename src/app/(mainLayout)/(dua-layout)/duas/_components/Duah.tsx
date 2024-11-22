@@ -22,7 +22,7 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
   const data: IDuah[] = await res.json();
 
   return (
-    <div className="px-5">
+    <div className="lg:px-2 px-5">
       <>
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
           <h4 className="font-semibold">

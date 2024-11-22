@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const SideIconNav = () => {
   return (
-    <div className="h-[92vh] mt-10 rounded-3xl bg-white lg:flex flex-col justify-between items-center py-5 min-w-[100px]   hidden">
-      <div>
+    <div className="lg:h-[92vh] mt-10 rounded-3xl bg-white flex flex-col justify-between items-center py-5 lg:min-w-[100px]  min-w-[100vw] lg:static fixed bottom-0 z-20">
+      <div className="hidden lg:block">
         <Image
           alt="dua-logo"
           className=""
@@ -13,7 +13,7 @@ const SideIconNav = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-[27]">
+      <div className="flex lg:flex-col gap-[27]">
         <div className="size-[38] bg-[#e8f0f5] flex justify-center items-center rounded-full">
           <Image
             alt="dua-logo"
@@ -46,8 +46,16 @@ const SideIconNav = () => {
             width={20}
           />
         </div>
-
         <div className="size-[38] bg-[#e8f0f5] flex justify-center items-center rounded-full">
+          <Image
+            alt="dua-logo"
+            height={20}
+            src="https://i.ibb.co/Wz5CnVM/3-keep-minus.png"
+            width={20}
+          />
+        </div>
+
+        <div className="size-[38] bg-[#e8f0f5] lg:flex hidden justify-center items-center rounded-full">
           <Image
             alt="dua-logo"
             height={20}
@@ -55,7 +63,7 @@ const SideIconNav = () => {
             width={20}
           />
         </div>
-        <div className="size-[38] bg-[#e8f0f5] flex justify-center items-center rounded-full">
+        <div className="size-[38] bg-[#e8f0f5] lg:flex hidden justify-center items-center rounded-full">
           <Image
             alt="dua-logo"
             height={20}
@@ -63,7 +71,7 @@ const SideIconNav = () => {
             width={20}
           />
         </div>
-        <div className="size-[38] bg-[#e8f0f5] flex justify-center items-center rounded-full">
+        <div className="size-[38] bg-[#e8f0f5] lg:flex justify-center items-center rounded-full hidden">
           <Image
             alt="dua-logo"
             height={20}
@@ -73,7 +81,7 @@ const SideIconNav = () => {
         </div>
       </div>
 
-      <div>
+      <div className="lg:block hidden">
         <div className="bg-primary size-[57px] flex justify-center items-center rounded-lg">
           <Image
             alt="dua-logo"
