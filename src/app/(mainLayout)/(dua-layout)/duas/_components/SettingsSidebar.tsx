@@ -97,7 +97,7 @@ const SettingsSidebar = () => {
                   "w-4 h-4 shadow-lg bg-[#A4A4A4] border-[]",
                   "group-data-[hover=true]:border-primary",
                   //selected
-                  "group-data-[selected=true]:ml-6",
+                  "group-data-[selected=true]:ml-4",
                   // pressed
                   "group-data-[pressed=true]:w-7",
                   "group-data-[selected]:group-data-[pressed]:ml-4"
