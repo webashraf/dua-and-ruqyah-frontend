@@ -41,7 +41,7 @@ const SideIconNav = () => {
         {icons.map((icon, index) => (
           <div
             key={index}
-            className={`h-[38px] w-[38px] bg-[#e8f0f5] flex justify-center items-center rounded-full ${
+            className={`min-h-[38px] min-w-[38px] bg-[#e8f0f5] flex justify-center items-center rounded-full ${
               icon.hiddenOnSmall ? "hidden lg:flex" : ""
             }`}
           >
