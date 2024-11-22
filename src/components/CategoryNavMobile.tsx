@@ -19,10 +19,10 @@ const CategoryNavMobile = () => {
   return (
     <div className="py-5 mx-5 lg:hidden block">
       <button
-        className="w-full bg-white text-gray-800 py-8 shadow-md text-[16px] font-semibold flex justify-start rounded-lg px-5"
+        className="w-full bg-white text-gray-800 py-5 shadow-md text-[16px] font-semibold flex justify-start items-center rounded-lg px-5"
         onClick={toggleDrawer}
       >
-        <RxHamburgerMenu size={30} />  &nbsp;
+        <RxHamburgerMenu size={20} />  &nbsp;
         Dua's importance
       </button>
       <Drawer

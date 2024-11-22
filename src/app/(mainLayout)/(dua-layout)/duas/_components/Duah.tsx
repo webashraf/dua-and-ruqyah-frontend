@@ -25,9 +25,9 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
     <div className="lg:px-2 px-5">
       <>
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h4 className="font-semibold">
+          <h4 className="font-semibold text-[16px]">
             <span className="text-green-600">Section: </span>
-            <span className="text-gray-800">{sub_cat.subcat_name_en}</span>
+            <span className="text-[#393939]">{sub_cat.subcat_name_en}</span>
           </h4>
         </div>
         {data.length === 0 ? (
@@ -50,24 +50,26 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
                     src={ALLAH_IMAGE_URL}
                     width={35}
                   />
-                  <h4>
+                  <h4 className="text-[16px]">
                     {dua.id}. {dua.dua_name_en}
                   </h4>
                 </div>
               )}
-              {dua.top_en && <p className="text-gray-700 mb-4">{dua.top_en}</p>}
+              {dua.top_en && (
+                <p className="text-gray-700 mb-4 font-sans">{dua.top_en}</p>
+              )}
               {dua.clean_arabic && (
-                <p className="text-gray-800 p-4 rounded-lg text-sm mb-4 text-right">
+                <p className="text-gray-800 p-4 rounded-lg text-sm mb-4 text-right font-sans">
                   {dua.clean_arabic}
                 </p>
               )}
               {dua.transliteration_en && (
-                <p className="text-gray-600 font-medium">
+                <p className="text-gray-600 font-medium font-sans">
                   <strong>Transliteration:</strong> {dua.transliteration_en}
                 </p>
               )}
               {dua.translation_en && (
-                <p className="text-gray-600 font-medium">
+                <p className="text-gray-600 font-medium font-sans">
                   <strong>Translation:</strong> {dua.translation_en}
                 </p>
               )}
@@ -77,7 +79,7 @@ const Duah = async ({ sub_cat }: { sub_cat: ISubCategory }) => {
                 </p>
               )}
               {dua.refference_en && (
-                <p className="text-gray-600 font-medium">
+                <p className="text-gray-600 font-medium font-sans">
                   <strong className="text-green-600">Reference:</strong>{" "}
                   {dua.refference_en}
                 </p>

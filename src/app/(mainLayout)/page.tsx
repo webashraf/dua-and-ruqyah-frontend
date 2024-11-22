@@ -1,5 +1,14 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10" />
+    <div className="min-h-screen flex items-center justify-center">
+      <Link
+        className="text-primary text-7xl uppercase text-center underline"
+        href="/duas"
+      >
+        Duah
+      </Link>
+    </div>
   );
 }

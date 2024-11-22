@@ -14,11 +14,25 @@ export const Navbar = () => {
   const searchInput = (
     <Input
       aria-label="Search"
-      className="relative bg-white"
+      className="relative"
       classNames={{
-        inputWrapper: "bg-white border pr-1 h-[50px] w-[400px] py-[2px]",
-        input: "text-sm ",
+        inputWrapper: [
+          "bg-white border pr-1 h-[50px] w-[400px] py-[2px] ",
+          "hover:bg-white",
+          "dark:hover:bg-white ",
+          "focus-within:!bg-white",
+          "dark:focus-within:!bg-white",
+          "focus-within:!text-black",
+          "dark:focus-within:!text-black",
+          "text-black",
+        ],
+        input: [
+          "text-black",
+          "text-black dark:text-black",
+          "placeholder:text-[#868686] dark:placeholder:text-[#868686]",
+        ],
       }}
+      color="primary"
       endContent={
         <div className="bg-[#f3f4f6] px-2 h-full flex items-center justify-center rounded-lg">
           <IoIosSearch

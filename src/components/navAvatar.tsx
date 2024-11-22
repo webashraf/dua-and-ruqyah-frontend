@@ -19,7 +19,7 @@ const NavAvatar = () => {
               as="button"
               className="transition-transform"
               size="sm"
-              src=""
+              src="https://i.ibb.co/j5fxFmV/Vector-1.png"
             />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">

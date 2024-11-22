@@ -44,7 +44,7 @@ const CategoryMenu = () => {
   );
 
   return (
-    <div className="space-y-2 min-w-[350px] rounded-xl lg:overflow-hidden">
+    <div className="space-y-2 min-w-[350px] rounded-xl lg:overflow-hidden bg-white">
       <div className="bg-primary flex items-center justify-center text-[17px] font-sans h-[57px]">
         <h4>Category</h4>
       </div>
@@ -54,12 +54,26 @@ const CategoryMenu = () => {
           aria-label="Search"
           className="relative bg-white"
           classNames={{
-            inputWrapper: "bg-white border pl-1 h-[50px] py-[2px]",
-            input: "text-sm",
+            inputWrapper: [
+              "bg-white border pl-1 h-[50px] py-[2px] ",
+              "hover:bg-white",
+              "dark:hover:bg-white ",
+              "focus-within:!bg-white",
+              "dark:focus-within:!bg-white",
+              "focus-within:!text-black",
+              "dark:focus-within:!text-black",
+              "text-black",
+            ],
+            input: [
+              "text-black",
+              "text-black dark:text-black",
+              "placeholder:text-[#868686] dark:placeholder:text-[#868686]",
+            ],
           }}
-          placeholder="Search by Dua Name"
+          color="primary"
+          placeholder="Search by Categories"
           startContent={
-            <div className="bg-[#f3f4f6] px-2 h-full flex items-center justify-center rounded-lg">
+            <div className=" px-2 h-full flex items-center justify-center rounded-lg">
               <IoIosSearch
                 className="text-base text-default-400 pointer-events-none flex-shrink-0"
                 size={26}
@@ -84,7 +98,7 @@ const CategoryMenu = () => {
                     disableAnimation={true}
                     itemClasses={{
                       base: "py-2 w-full",
-                      trigger: ` px-2 py-2 data-[hover=true]:bg-[#e8f0f5] rounded-lg  flex items-center ${
+                      trigger: `px-2 py-2 data-[hover=true]:bg-[#e8f0f5] rounded-lg  flex items-center ${
                         activeAccordion === category?.id ? "bg-[#e8f0f5]" : ""
                       }`,
                       content: "text-small px-2 py-2",
@@ -130,7 +144,10 @@ const CategoryMenu = () => {
                         )
                       }
                     >
-                      <SubCategories id={category?.id} />
+                      <div className="px-2">
+                        {" "}
+                        <SubCategories id={category?.id} />
+                      </div>
                     </AccordionItem>
                   </Accordion>
                 </div>

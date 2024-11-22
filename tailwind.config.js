@@ -1,4 +1,5 @@
-import { nextui } from '@nextui-org/theme';
+const { fontFamily } = require('tailwindcss/defaultTheme');
+const { nextui } = require('@nextui-org/theme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,15 +11,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1fa45b", 
+        primary: '#1fa45b',
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
-        poppins: ["Poppins", "sans-serif"], 
+        sans: ['Inter', ...fontFamily.sans], // Default sans-serif fonts with Inter
+        poppins: ['Poppins', 'sans-serif'], // Explicit Poppins font family
+        mono: ['var(--font-mono)'], // Custom mono font
       },
     },
   },
-  darkMode: 'class', 
-  plugins: [nextui()], 
+  darkMode: 'class', // Enables dark mode using the `class` strategy
+  plugins: [nextui()], // Enables NextUI theme integration
 };
