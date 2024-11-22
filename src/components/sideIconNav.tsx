@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const icons = [
   { src: "https://i.ibb.co/278fYn2/home-1.png", alt: "Home" },
@@ -27,14 +28,14 @@ const SideIconNav = () => {
   return (
     <div className="lg:h-[92vh] mt-10 rounded-3xl bg-white flex flex-col justify-between items-center py-5 lg:min-w-[100px] min-w-[100vw] lg:static fixed bottom-0 z-20">
       {/* Logo */}
-      <div className="hidden lg:block">
+      <Link className="hidden lg:block" href="/">
         <Image
           alt="Dua Logo"
           height={90}
           src="https://i.ibb.co/ZTCrp4L/unnamed-1.png"
           width={90}
         />
-      </div>
+      </Link>
 
       {/* Icons */}
       <div className="flex lg:flex-col gap-7">
